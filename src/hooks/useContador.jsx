@@ -8,7 +8,11 @@ export const useContador = (valorInicial) => {
     }
 
     const disminuir = () => {
-        setContador(contador - 1);
+        if(contador > 0){
+            setContador(contador - 1);
+        }else{
+            alert('Debe ser mayor a 0');
+        }
     }
 
     return {contador, aumentar, disminuir};
